@@ -1,0 +1,5 @@
+package emergenceshelter.management.file;
+
+public class AdminCsv {
+
+}

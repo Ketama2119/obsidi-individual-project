@@ -1,0 +1,24 @@
+package emergenceshelter.management.user;
+
+import java.util.HashMap;
+
+public abstract class Personnel extends AccountHolder {
+    protected String password;
+
+    // Constructor with colors parameter for consistent messaging across classes
+    public Personnel(String firstName, String lastName, String email, String password) {
+        super(firstName, lastName, email); // Pass colors to AccountHolder superclass
+        this.password = password;
+    }
+
+    // Getter for password
+    public String getPassword() {
+        return password;
+    }
+
+    // Setter for password with color-coded success message
+    public void setPassword(String password, HashMap<String, String> colors) {
+        this.password = password;
+        System.out.println(colors.get("GREEN") + "Password updated successfully." + colors.get("RESET"));
+    }
+}

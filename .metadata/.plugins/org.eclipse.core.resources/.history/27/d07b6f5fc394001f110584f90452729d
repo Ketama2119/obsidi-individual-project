@@ -1,0 +1,20 @@
+package emergenceshelter.management.user;
+
+enum AdminMenu {
+	  APPROVE_STAFF, REVOKE_STAFF, VIEW_APPROVED_STAFF, BACK, EXIT, NONE
+	}
+	enum StaffMenu {
+	  SUPERVISOR, 
+	  CASEWORKER, 
+	  ASSIGN_RESIDENT_TO_CASEWORKER,
+	  VIEW_ASSIGNED_RESIDENTS,
+	  ADD_NEW_RESIDENT,
+	  ASSIGN_UNIT_TO_RESIDENT,
+	  SCHEDULE_MEETING_WITH_RESIDENT,
+	  VIEW_UPCOMING_MEETINGS,
+	  BACK,
+	  EXIT,
+	  NONE
+	}
+	enum SupervisorMenu {
+	}

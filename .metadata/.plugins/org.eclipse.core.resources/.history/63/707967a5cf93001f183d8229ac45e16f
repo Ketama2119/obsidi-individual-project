@@ -1,0 +1,38 @@
+package emergenceshelter.management.junit;
+import static   org.junijupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import emergenceshelter.management.user.Admin;
+import emergenceshelter.management.user.Staff;
+
+public class TestingAdmin {
+
+    private Admin admin;
+    private List<Staff> staffs;
+
+    @BeforeEach
+    void setUp() {
+        admin = new Admin("Admin", "User", "admin@example.com", "password123");
+        staffs = new ArrayList<>();
+        staffs.add(new Staff("Alice", "Green", "alice.green@example.com", "password123"));
+        staffs.add(new Staff("Bob", "Brown", "bob.brown@example.com", "password123"));
+    }
+
+    @Test
+    public void testApproveStaff() {
+        // Before approving
+        Staff staffToApprove = staffs.get(0);
+        assertFalse(staffToApprove.isVerified);
+
+        // Approving the staff
+        staffToApprove.isVerified = true;
+        
+        // After approving
+        assertTrue(staffToApprove.isVerified);
+    }
+}

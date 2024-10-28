@@ -1,0 +1,5 @@
+package emergenceshelter.management.user;
+
+public class Supervisor {
+
+}
